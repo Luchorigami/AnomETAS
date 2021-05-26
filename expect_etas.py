@@ -5,7 +5,7 @@ import scipy.stats as sc
 plt.close('all')
 
 # Load Etas estimation file's paths
-fittedpaths = glob.glob('/home/moutoteluc/Documents/stageM2_marsan/review/newMc/fitetas/alphafree/*.npz')
+fittedpaths = glob.glob('localcatalogs_and_etas_parameter_estimations/*npz')
 
 
 for ipath in range(len(fittedpaths)):
