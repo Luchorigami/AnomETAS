@@ -1,5 +1,5 @@
 # Detection of non-ETAS seismic activities
-The detecttion of non-ETAS seismicity analysis presented here follow the work presented here:
+The detection of non-ETAS seismic activity analysis presented here follow the work presented here:
 
 Moutote, L., Marsan, D., Lengliné, O., Duputel, Z., 2021. Rare Occurrences of Non‐cascading Foreshock Activity in Southern California. Geophys Res Lett 48. https://doi.org/10.1029/2020GL091757
 
