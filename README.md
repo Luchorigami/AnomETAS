@@ -9,4 +9,4 @@ Moutote, L., Marsan, D., Lengliné, O., Duputel, Z., 2021. Rare Occurrences of N
 - We use the extracted ETAS model parameter to compute the number of event expected in short time widow and compare it with the number of event actually observed.
 - Following a Poisson hypothesis for the natural variation of the expected number of event, we extracted a probability that the expected ETAS number of event explain the observed number of event in a short time window.
 
-
+# How to run
