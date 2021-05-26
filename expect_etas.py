@@ -1,9 +1,7 @@
 import numpy as np
-import matplotlib.pyplot  as plt
 import glob
 import time
 import scipy.stats as sc
-from matplotlib.gridspec import GridSpec
 plt.close('all')
 
 # Load Etas estimation file's paths
@@ -32,21 +30,23 @@ for ipath in range(len(fittedpaths)):
     magmain         = mag   [imain]
     
     # Length of foreshock window in days
-    fw              = 20 
+    fw              = 20
+    # 1-day shift slinding window analysis : End time of each windows 
     twinends        = np.concatenate( [ np.flip( np.arange(tmain,tday[0],-1)) , np.arange(tmain+1,tday[-1],1)] ) 
   
-    Naft            = []
-    bgd             = []
-    Nobs            = []
+    Naft            = [] # Nb of expected aftershocks in each windows
+    bgd             = [] # Nb of expected background earthquakes in each windows
+    Nobs            = [] # Observed Nb of earthqukes in each windows
 
+    # 1-day shift slinding window analysis
     for twe in twinends:
-        # Integration of ETAS formula for events before the window
+        # Integration of ETAS formula for events before the current window
         i_out       = np.where(tday < twe-fw)[0]
         t_out       = tday[i_out]
         m_out       = mag [i_out]
         Naft_out    = np.sum( A*np.exp(alpha*(m_out-mc))/(1-p) * ((twe-t_out + c)**(1-p) - (twe-fw-t_out + c)**(1-p)) )
 
-        # Integration of ETAS formula for event in the window
+        # Integration of ETAS formula for event within the current window
         i_in        = np.where((tday >= twe-fw)*(tday<twe))[0]
         t_in        = tday[i_in]
         m_in        = mag [i_in]
@@ -64,11 +64,11 @@ for ipath in range(len(fittedpaths)):
     bgd             = mu*fw
     Nexpect         = np.array(Naft) + np.array(bgd)
       
-    # Evaluate the probabilty of observing at least Nobs alonf a poisson lax of mean Nexpect
+    # Evaluate the probabilty of observing at least Nobs along a poisson law of mean Nexpect
     prob            = sc.poisson.cdf(Nobs,Nexpect)
     prob            = 1-prob
     
-    #case Nobs=1 => p(Netas>=Nobs) = 1 
+    # Case Nobs=0 => p(Netas>=Nobs) = 1 
     prob[np.where(Nobs==0)[0]]=1
 
     # Center time axis on the mainshock 
@@ -81,7 +81,7 @@ for ipath in range(len(fittedpaths)):
     if len(probw)==0:
         probw = 1
 
-    np.savez('alphafree/%s.expect.alf'%IDmain,prob=prob,Nexpect=Nexpect,probw=probw,Naft=Naft,bgd=bgd,twinendsmain=twinendsmain,IDmain=IDmain,tday=tday,mag=mag,tmain=tmain,magmain=magmain)
+    np.savez('%s.expect.alf'%IDmain,prob=prob,Nexpect=Nexpect,probw=probw,Naft=Naft,bgd=bgd,twinendsmain=twinendsmain,IDmain=IDmain,tday=tday,mag=mag,tmain=tmain,magmain=magmain)
 
 
 
