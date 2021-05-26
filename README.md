@@ -11,5 +11,5 @@ Moutote, L., Marsan, D., Lengliné, O., Duputel, Z., 2021. Rare Occurrences of N
 
 # What you need
 - A temporal catalog of seismicity (Time vs Magnitude). The spatial ranges of the catalog must be small
-- The ETAS parameter of the catalog (see Eq. 1 in Moutote et al, 2021)
+- The ETAS parameter of the catalog: A, c ,p \alpha, \mu and m_c (see Eq. 1 in Moutote et al, 2021)
 - 
