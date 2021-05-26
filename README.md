@@ -1,4 +1,4 @@
-# Detection of non-ETAS seismic activities
+# AnomETAS: Detection of non-ETAS seismic activities
 The detection of non-ETAS seismic activity analysis presented here follow the work presented here:
 
 Moutote, L., Marsan, D., Lengliné, O., Duputel, Z., 2021. Rare Occurrences of Non‐cascading Foreshock Activity in Southern California. Geophys Res Lett 48. https://doi.org/10.1029/2020GL091757
@@ -9,4 +9,7 @@ Moutote, L., Marsan, D., Lengliné, O., Duputel, Z., 2021. Rare Occurrences of N
 - We use the extracted ETAS model parameter to compute the number of event expected in short time widow and compare it with the number of event actually observed.
 - Following a Poisson hypothesis for the natural variation of the expected number of event, we extracted a probability that the expected ETAS number of event explain the observed number of event in a short time window.
 
-# How to run
+# What you need
+- A temporal catalog of seismicity (Time vs Magnitude). The spatial ranges of the catalog must be small
+- The ETAS parameter of the catalog (see Eq. 1 in Moutote et al, 2021)
+- 
