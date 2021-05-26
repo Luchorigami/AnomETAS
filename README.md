@@ -6,7 +6,7 @@ Moutote, L., Marsan, D., Lengliné, O., Duputel, Z., 2021. Rare Occurrences of N
 - We selected 53 mainshock (M>=4) in Southern california over a very complete catalog from template matching (QTM catalog : https://scedc.caltech.edu/data/qtm-catalog.html)
 - We focused on the seismicity over 10 year within a 20 by 20 km box around each mainshock.
 - We extracted typical temporal Epidemic Type Aftershock Sequence (ETAS) model parameter over the 10-year seismicity.
-- We use the extracted ETAS model parameter to compute the number of event expected in short time widow and compare it with the number of event actually observed.
+- We use the extracted ETAS model parameter to compute the number of event expected in short time widow (i.e. 20days) and compare it with the number of event actually observed.
 - Following a Poisson hypothesis for the natural variation of the expected number of event, we extracted a probability that the expected ETAS number of event explain the observed number of event in a short time window.
 - We specifically focus on the result of the foreshock window (i.e. the window just before a mainshock), but we compute the probability using a 1-day shift slinding window over the full length of the local catalog.
 
