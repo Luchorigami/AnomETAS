@@ -22,7 +22,7 @@ For each window in the slinding analysis:
   - The ETAS expected number of event that depend on the magnitude distribution observed before and within the window. The natural variations of this number are distributed along a Poisson law
   - The probability of observing at least the observed number of events considering the ETAS expected number of events. 
 
-We consider that a p-value below 0.01 is likely to evidence a non-ETAS behaviour. In these case the high sismic activity observed can't be explained by typical ETAS eartquakes interactions. 
+We consider that a p-value below 0.01 is likely to evidence a non-ETAS behaviour. In these case the high seismic activity observed can't be explained by typical ETAS eartquakes interactions. 
 
 Contact:
 Luc Moutote - PhD student - Institut Terre & Environnement de Strasbourg | ITES | UMR 7063
